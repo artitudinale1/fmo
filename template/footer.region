@@ -1,0 +1,50 @@
+
+		<!-- LAST ROW : NEWSLETTER-->
+
+			<div class="grid">
+				     {.section website}
+				<div class="newsletter-container clearfix">
+					<div class="col-newsletter">
+						<squarespace:block-field id="newsletter" >
+					</div>
+				</div>
+			</div>
+
+		</div><!-- CLOSE CONTENT -->
+	  <footer id="footer" class="footer">        
+		<div class="grid">
+				<ul>					   
+					<li><squarespace:block-field id="footerBlocks" columns="12" /></li>
+				</ul>
+				<div class="social-network">
+					<ul class="socialicons">
+		              <li><a target="_blank" href="https://www.facebook.com/FMOLeics"><img src="/assets/facebook.png" /></a></li>
+                	  <li><a target="_blank" href="https://twitter.com/fmo_leics"><img src="/assets/tweeter.png"/></a></li>
+                	  <li><a target="_blank" href="https://www.youtube.com/channel/UCD0nPXqTnc6rbFm8TGX3sUQ"><img src="/assets/youtube.png"/></a></li>
+		          </ul>
+				</div>
+			</div>
+		</footer>
+	</div><!-- CLOSE WRAPPER -->
+</div>
+
+    <!--Combo and minify the scripts when you're not logged in.-->
+    <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
+    <!--Injection point for tracking scripts and user content from the code injection tab.-->
+    {squarespace-footers}
+   
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60922030-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+</body>
+
+

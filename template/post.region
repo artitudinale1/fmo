@@ -1,0 +1,5 @@
+   <!--Content injection point.-->
+      <div class="content-container">
+      		<main id="content" class="content" role="main" data-content-field="main-content"> 
+	     		 {squarespace.main-content}
+     		</main>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1">
+    <!--Include sqs scripts, meta tags, and user content from the code injection tab.-->
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+
+    <div class="container grid">
+      <header id="header" class="header">
+        <!--Site title or logo.-->
+        <div class="grid">
+         <div class=" col-1-3 social-network clearfix">
+             <ul class="socialicons">
+                <li><squarespace:block-field id="search"/></li>
+                <li><a target="_blank" href="https://www.facebook.com/FMOLeics"><img src="/assets/facebook.png" /></a></li>
+                <li><a target="_blank" href="https://twitter.com/fmo_leics"><img src="/assets/tweeter.png"/></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCD0nPXqTnc6rbFm8TGX3sUQ"><img src="/assets/youtube.png"/></a></li>
+
+            </ul>
+           </div>
+         </div>
+
+        <div class="grid">
+          {.section website}
+        <div class="col-1-3 " id="logo">
+           <a href="/">
+          <h1 class="site-title" data-content-field="site-title">
+           
+              {.section logoImageUrl}
+               <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+              {.or}
+                {siteTitle}
+              {.end}
+          
+          </h1>   
+
+       
+          <!--Site tagline. ...-->
+          {.section siteTagLine}
+            <p class="site-tagline">{@}</p>
+          {.end}
+          </a>
+        {.end}
+      </div>
+      <div id="mobile-menu" class="grid"><p><b>MENU</b></p></div>
+        <div>
+        <!--Main navigation. -->
+        <squarespace:navigation navigationId="mainNav" template="navigation" />
+      </div>
+      
+       </div>
+      </header>
+  </div>

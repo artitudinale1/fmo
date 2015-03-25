@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1">
+    <!--Include sqs scripts, meta tags, and user content from the code injection tab.-->
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+      <div style="max-width:500px; margin: 0 auto;">
+        <img src="assets/logo.png" alt="logo"/>
+        <p> We are rebranding, coming soon </p>
+
+      </div>
+    
+  </body>

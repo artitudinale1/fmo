@@ -1,0 +1,15 @@
+   <!--Content injection point.-->
+        <div class="content-container">
+            <main id="content" class="content  " role="main" data-content-field="main-content">
+        		<div class="banner content-fill" > 
+            		{.section collection} 
+      	       	{.section mainImage} 
+      		      <img {@|image-meta} /> 
+      		      {.or}    <!-- PLEASE UPLOAD A PAGE THUMBNAILS TO DISPLAY AS BANNER -->
+                {.end} 
+                {.end}
+            </div>
+            <div class="grid single-page-container">
+              {squarespace.main-content}
+     		   </div>
+         </main>

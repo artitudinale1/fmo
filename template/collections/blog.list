@@ -1,0 +1,100 @@
+
+<!-- CATEGORY FILTER RESULTS ex: http://base-template.squarespace.com/blog/?category=category1 -->
+<div class="banner content-fill" > 
+          {.section collection} 
+          {.section mainImage} 
+          <img {@|image-meta} /> 
+          {.or} NO IMAGE {.end} {.end}
+
+          </div>
+
+
+{.section categoryFilter}
+  <p>Filtering by Category: {@|safe}</p>
+{.end}
+
+<!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 -->
+
+{.section tagFilter}
+  <p>Filtering by Tag: {@|safe}</p>
+{.end}
+
+<!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
+
+{.if authorFilter}
+  <p>Filtering by Author: {author.displayName}</p>
+{.end}
+   <div class="content-container">
+        <div class="filter grid ">
+<div class="col-filter">
+              <p><b>Filter:</b></p>
+              <p id="all"><a href="/news">All</a></p>
+                  <squarespace:block-field id="category" columns="1"/>
+            </div>
+
+          </div>
+
+<!--ITEM LOOP-->
+  <div class="grid">
+    {.repeated section items}
+      <article id="post-{id}" class="{@|item-classes} " data-item-id="{id}">
+          <div class="col-1-3">
+            <div class="module-container">
+                {.main-image?}  
+                <a href="{fullUrl}" class="main-image ">
+                  <img {@|image-meta} />
+                </a>
+                {.end}
+                <div class="caption-container">
+                      <small>{categories}</small>
+                      <h2 class="title caption " data-content-field="title">
+                        {.passthrough?}
+                        <a href="{sourceUrl}" target="_blank">{title}</a>
+                        {.or}
+                        <a href="{fullUrl}">{title}</a>
+                        {.end}
+                      </h2>
+                </div>
+          </div>
+                  
+        <div class="entry-injection">
+        <div></div>
+      </div>
+        </div>
+
+        <!-- EMPTY COL AS PUSH  -->
+        <div class="col-1-12">
+  
+      
+        </div>
+
+  </article>
+
+      {.or}
+    No blog posts yet.
+{.end}
+</div>
+
+<!--PAGINATION
+  
+{.if pagination}
+  <nav id="pagination" class="grid">
+
+    NEWER PAGE
+
+    {.if pagination.prevPage}
+      <a class="active" href="{pagination.prevPageUrl}">Next</a>
+    {.or}
+      <a class="disabled">Next</a>
+    {.end}
+
+
+    {.if pagination.nextPage}
+      <a class="active" href="{pagination.nextPageUrl}">Prev</a>
+    {.or}
+      <a class="disabled">Prev</a>
+    {.end}
+
+  </nav>
+{.end}
+-->
